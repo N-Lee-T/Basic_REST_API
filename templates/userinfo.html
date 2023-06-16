@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>CS 493 A7 - User Info </title>
+
+{% endblock %}
+
+
+
+{% block body %}
+
+<div class="content">
+    <div class="row">
+        <div class="headline col-lg-6">
+            <h1>User information</h1>
+        </div>
+
+    </div>  
+
+    {% if name %}
+    
+    <h2> Information for {{sub}} </h2>
+    <br>
+    <h4>Google Datastore ID</h4>
+    <p> {{datastoreID}} </p>
+    <h4>Name</h4>
+    <p> {{name}} </p>
+    <h4> Email </h4>
+    <p> {{email}} </p>
+    <h4> sub </h4>
+    <p> {{sub}} </p>
+    <h4> books </h4>
+    <p> {{books}} </p>
+    <h4> libraries </h4>
+    <p> {{libraries}} </p>
+    <h4> token </h4>
+    <p> {{token}} </p>
+    <br>
+
+    {% else %}
+
+    <p> No user info to display </p>
+    
+    {% endif %}
+    <br>
+    <button class=subbutton type="submit" action="/logout" ><a href='/logout'>Click here to log out</a></button>
+
+</div>
+
+{% endblock %}

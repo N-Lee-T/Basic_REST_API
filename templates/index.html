@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>CS 493 A7</title>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="content">
+    <div class="row">
+        <div class="headline col-lg-6">
+            <h1>Hurrah, </h1>
+        </div>
+        <div class="top-text col-lg-6">
+            <h4> It's true: </h4>
+            <br>
+            <h4>you're at the Final Assignment home page</h4>
+        </div>
+    </div>  
+
+    {% if status %}
+    <p> u are logged in :) </p>
+    {% else %}
+
+    <button class="subbutton" type="submit" action="/login" value="login"><a href='/login'>Log in or create account</a></button>
+
+    {% endif %}
+
+
+</div>
+
+{% endblock %}
